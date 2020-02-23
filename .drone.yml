@@ -1,0 +1,33 @@
+clone:
+  clone:
+    image: plugins/git
+    depth: 20
+
+pipeline:
+  build:
+    image: openjdk:11.0.2
+    commands:
+      - ./gradlew clean assemble
+    when:
+      event: push
+
+  checkstyle-main:
+    image: openjdk:11.0.2
+    commands:
+      - ./gradlew checkstyleMain
+    when:
+      event: push
+
+  checkstyle-test:
+    image: openjdk:11.0.2
+    commands:
+      - ./gradlew checkstyleTest
+    when:
+      event: push
+
+  tests:
+    image: openjdk:11.0.2
+    commands:
+      - ./gradlew test jacocoTestCoverageVerification
+    when:
+      event: push

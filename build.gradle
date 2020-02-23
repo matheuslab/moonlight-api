@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'checkstyle'
+	id 'jacoco'
+}
+
+apply from: "${rootProject.rootDir}/config/checkstyle.gradle"
+apply from: "${rootProject.rootDir}/config/jacoco.gradle"
+apply from: "${rootProject.rootDir}/config/tests.gradle"
+
+group = 'com.cartola.tothemoon'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	
+	// Test Frameworks
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+	implementation 'org.mockito:mockito-core:3.2.4'
+	implementation 'org.mockito:mockito-junit-jupiter:3.2.4'
+	testImplementation 'org.hamcrest:hamcrest:2.2'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,33 @@
+//enforce code coverage
+check {
+    dependsOn jacocoTestCoverageVerification
+}
+
+test {
+    useJUnitPlatform()
+    failFast = true
+    finalizedBy jacocoTestReport
+}
+
+task unitTest(type: Test) {
+    useJUnitPlatform()
+    include '**/*Test.*'
+    exclude '**/integrationtests/*IT.*'
+    exclude '**/apitests/*Test.*'
+    exclude '**/*CT.*'
+}
+
+task integrationTest(type: Test) {
+    useJUnitPlatform()
+    include '**/integrationtests/*IT.*'
+}
+
+task apiTest(type: Test) {
+    useJUnitPlatform()
+    include '**/apitests/*Test.*'
+}
+
+task contractTest(type: Test) {
+    useJUnitPlatform()
+    include '**/*CT.*'
+}
