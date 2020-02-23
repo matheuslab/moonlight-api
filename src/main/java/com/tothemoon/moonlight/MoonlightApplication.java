@@ -1,13 +1,13 @@
-package com.cartola.tothemoon.tothemoon;
+package com.tothemoon.moonlight;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TothemoonApplication {
+public class MoonlightApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(TothemoonApplication.class, args);
+    SpringApplication.run(MoonlightApplication.class, args);
   }
 
 }

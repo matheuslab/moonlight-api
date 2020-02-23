@@ -1,8 +1,7 @@
-# To the Moon
+# MoonLight API
 
-[![Build Status](https://cloud.drone.io/api/badges/matheuslab/to-the-moon/status.svg)](https://cloud.drone.io/matheuslab/to-the-moon)
-
-![To the Moon](img/tothemoon.jpg)
+[![Build Status](https://cloud.drone.io/api/badges/matheuslab/moonlight-api/status.svg)](https://cloud.drone.io/matheuslab/moonlight-api)
+![Moonlight](img/moonlight.jpg)
 
 ### Prerequisites
 
@@ -21,7 +20,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 * Build the project
 ```
-cd <path>/tothemoon/
+cd <path>/moonlight-api/
 ./gradlew clean build
 ```
 

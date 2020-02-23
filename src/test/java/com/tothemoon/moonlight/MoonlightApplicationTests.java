@@ -1,10 +1,10 @@
-package com.cartola.tothemoon.tothemoon;
+package com.tothemoon.moonlight;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TothemoonApplicationTests {
+class MoonlightApplicationTests {
 
   @Test
   void contextLoads() {
