@@ -2,7 +2,7 @@ jacoco {
     toolVersion = "0.8.2"
 }
 
-def excludeFiles = ['**/TothemoonApplication.class',
+def excludeFiles = ['**/MoonlightApplication.class',
                     '**/ApiApplication.class',
                     '**/CoreApplication.class',
                     '**/**Config.class',
