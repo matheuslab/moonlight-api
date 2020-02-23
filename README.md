@@ -1,4 +1,4 @@
-# MoonLight API
+# Moonlight API
 
 [![Build Status](https://cloud.drone.io/api/badges/matheuslab/moonlight-api/status.svg)](https://cloud.drone.io/matheuslab/moonlight-api)
 ![Moonlight](img/moonlight.jpg)
