@@ -1,4 +1,4 @@
-package com.tothemoon.moonlight.core;
+package com.moonlight.core;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

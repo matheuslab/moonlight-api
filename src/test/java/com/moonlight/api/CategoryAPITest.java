@@ -1,4 +1,4 @@
-package com.tothemoon.moonlight.api;
+package com.moonlight.api;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
